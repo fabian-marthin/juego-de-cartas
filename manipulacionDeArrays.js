@@ -160,4 +160,3 @@ El puntaje de la computadora es de ${puntajeComp}`);
     }
 }
 
-repartirJugador()
