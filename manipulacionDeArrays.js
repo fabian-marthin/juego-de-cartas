@@ -100,16 +100,20 @@ function validarcartas() {
         }
         
     }
-    console.log(`Sistema de puntaje:
-    Si sacas pares tienes 200 puntos
-    Si sacas trios tienes 400 puntos
-    Si sacas cuartetos tienes 500 púntos`)
+const sistemaPuntaje = `Sistema de puntaje:
+Si sacas pares tienes 200 puntos
+Si sacas trios tienes 400 puntos
+Si sacas cuartetos tienes 500 púntos`;
+document.getElementById("sistemaPuntaje").innerHTML = sistemaPuntaje;
 
 
-console.log(`Cartas del jugador ${jugador1.flat().sort()}`)
-console.log(`Cartas del computador ${computadora.flat().sort()}`)
+const jg = `Cartas del jugador ${jugador1.flat().sort()}`;
+document.getElementById("jg").innerHTML = jg;
+
+const pc = `Cartas del computador ${computadora.flat().sort()}`;
+document.getElementById("pc").innerHTML = pc;
     
-    console.log(`Los números que tienes:
+const contarNum = `Los números que tienes:
 Número 1: ${contadorNum[0]}
 Número 2: ${contadorNum[1]}
 Número 3: ${contadorNum[2]}
@@ -117,8 +121,9 @@ Número 4: ${contadorNum[3]}
 Número 5: ${contadorNum[4]}
 Número 6: ${contadorNum[5]}
 Número 7: ${contadorNum[6]}
-Número 8: ${contadorNum[7]}`
-);
+Número 8: ${contadorNum[7]}`;
+
+document.getElementById("contarNum").innerHTML = contarNum;
 
     for (let i = 0; i < contadorNum.length; i++) {
         if(contadorNum[i]==4){
@@ -142,16 +147,18 @@ Número 8: ${contadorNum[7]}`
         }
     }
 
-    console.log(`El puntaje del jugador es: ${puntaje}
-El puntaje de la computadora es de ${puntajeComp}`);
+const puntos = `El puntaje del jugador es: ${puntaje}
+El puntaje de la computadora es de ${puntajeComp}`;
+document.getElementById("puntos").innerHTML = puntos;
    
-
+    let win;
     if (puntaje>puntajeComp) {
-        console.log(`GANASTEEEEE`)
+        win = `GANASTEEEEE`
     }else if(puntaje<puntajeComp){
-        console.log(`Lo siento sigue intentandolo`)
+        win = `Lo siento sigue intentandolo`
     }else{
-        console.log(`EMPATE`)
+        win = `EMPATE`
     }
+    document.getElementById("win").innerHTML = win;
 }
 
