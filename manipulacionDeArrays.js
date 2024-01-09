@@ -12,6 +12,7 @@ for (let i = 0; i < numCartas.length; i++) {
     cartas.push(numCartas[i]+"♣")
     cartas.push(numCartas[i]+"♠")
 }
+repartirJugador()
 
 function repartirJugador(){
     if (numCartasRep<=10) {
@@ -104,12 +105,6 @@ function validarcartas() {
     Si sacas trios tienes 400 puntos
     Si sacas cuartetos tienes 500 púntos`)
 
-/*     console.log(`El contador simbolos:
-Corazones: ${contadorSim.contadorCorazon}
-Picas: ${contadorSim.contadorPicas}
-Diamantes: ${contadorSim.contadorDiamantes}
-Trevoles ${contadorSim.contadorTrevoles}`
-); */
 
 console.log(`Cartas del jugador ${jugador1.flat().sort()}`)
 console.log(`Cartas del computador ${computadora.flat().sort()}`)
